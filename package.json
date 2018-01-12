@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/splitio/react-typescript-sdk-examples#readme",
   "dependencies": {
-    "@splitsoftware/splitio": "^9.3.5",
+    "@splitsoftware/splitio": "^9.4.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
