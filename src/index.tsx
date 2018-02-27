@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 // Importing splitio package
-import splitio = require('@splitsoftware/splitio');
+import { SplitFactory } from '@splitsoftware/splitio';
 
 import { App } from "./components/App";
 
@@ -24,7 +24,7 @@ const settings: SplitIO.IBrowserSettings = {
   }
 }
 // We instantiate the SDK
-const sdk: SplitIO.ISDK = splitio(settings);
+const sdk: SplitIO.ISDK = SplitFactory(settings);
 // Get our client api.
 const client: SplitIO.IClient = sdk.client();
 // You could have some attributes for this customer. (Not used on this particular example).
