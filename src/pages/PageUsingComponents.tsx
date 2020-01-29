@@ -1,6 +1,7 @@
 import React from 'react';
 import { SplitClient, SplitTreatments } from '@splitsoftware/splitio-react';
 import { feature_1, feature_2, feature_3 } from '../sdkConfig';
+import { ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react/types/types';
 
 /* This example shows SplitClient and SplitTreatments components */
 
@@ -11,12 +12,12 @@ function Loading() {
 export default function PageUsingComponents() {
   return (
     <main>
-      <SplitTreatments names={[feature_1]} >
-        {/* `SplitTreatments` passes down to a child function a `treatments` prop, which contains split evaluations.
+      {/* `SplitTreatments` passes down to a child function a `treatments` prop, which contains split evaluations.
           * It also passes down the SDK status (`isReady`, `isTimedout`, `lastUpdate`) as props, but we are not using
           * them in this part of the example. This means that for a brief time, the following piece of UI will show up 
           * the `control` treatment value until the SDK isReady */}
-        {({ treatments }) => {
+      <SplitTreatments names={[feature_1]} >
+        {({ treatments }: ISplitTreatmentsChildProps) => {
           return (
             <div className="App-section">
               <h4>{`Split: ${feature_1}`}</h4>
@@ -30,9 +31,9 @@ export default function PageUsingComponents() {
         *  Thus, the inner `SplitTreatments` components will evaluate splits for a different key */}
       <SplitClient splitKey="other_user" >
         <SplitTreatments names={[feature_2, feature_3]} >
-          {/* In the following piece of UI, we use the `isReady` prop as condition for
-            * rendering a `Loading` component until the client with key `other_user` is ready */}
-          {({ treatments, isReady }) => {
+          {({ treatments, isReady }: ISplitTreatmentsChildProps) => {
+            /* In the following piece of UI, we use the `isReady` prop as condition for
+            * rendering a `Loading` component until the client with key `other_user` is ready */
             return isReady ? (
               <div className="App-section">{
                 Object.entries(treatments).map(([splitName, treatment]) =>

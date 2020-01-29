@@ -6,7 +6,7 @@ import { feature_1, feature_2, feature_3 } from '../sdkConfig';
 
 function Loading() {
   return <div>Loading SDK...</div>
-}
+};
 
 export default function PageUsingHooks() {
 
@@ -20,10 +20,12 @@ export default function PageUsingHooks() {
   );
 
   const [isReady, setReady] = useState(false);
-  const client = useClient('other_user');
-  client.ready().then(() => { setReady(true) });
 
-  const treatments = client.getTreatmentsWithConfig([feature_2, feature_3]);
+  // `useClient` returns `null` if we are not using it inside the scope of a `SplitFactory` component 
+  const client: SplitIO.IClient | null = useClient('other_user');
+  client?.ready().then(() => { setReady(true) });
+
+  const treatments: SplitIO.TreatmentsWithConfig = client ? client.getTreatmentsWithConfig([feature_2, feature_3]) : {};
   const OtherFeatures = (
     isReady ? (
       <div className="App-section">{

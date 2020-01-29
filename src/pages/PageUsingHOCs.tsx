@@ -1,6 +1,7 @@
 import React from 'react';
 import { withSplitClient, withSplitTreatments } from '@splitsoftware/splitio-react';
 import { feature_1, feature_2, feature_3 } from '../sdkConfig';
+import { ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react/types/types';
 
 /* This example shows withSplitClient and withSplitTreatments HOCs */
 
@@ -9,7 +10,7 @@ function Loading() {
 }
 
 const TestSplit = withSplitTreatments([feature_1])(
-  ({ treatments }) => {
+  ({ treatments }: ISplitTreatmentsChildProps) => {
     return (
       <div className="App-section">
         <h4>{`Split: ${feature_1}`}</h4>
@@ -19,9 +20,9 @@ const TestSplit = withSplitTreatments([feature_1])(
   }
 );
 
-const OtherSplits = withSplitClient('other_user')(
+const OtherSplits: React.ComponentType = withSplitClient('other_user')(
   withSplitTreatments([feature_2, feature_3])(
-    ({ treatments, isReady }) => {
+    ({ treatments, isReady }: ISplitTreatmentsChildProps) => {
       return isReady ? (
         <div className="App-section">{
           Object.entries(treatments).map(([splitName, treatment]) =>

@@ -14,7 +14,7 @@ Follow these steps to run the example app:
     yarn
     ```
 
-- Update Split config at `src/sdkConfig.js` to use your [Api key](https://help.split.io/hc/en-us/articles/360020448791-JavaScript-SDK#2-instantiate-the-sdk-and-create-a-new-split-client). 
+- Update Split config at `src/sdkConfig.ts` to use your [Api key](https://help.split.io/hc/en-us/articles/360020448791-JavaScript-SDK#2-instantiate-the-sdk-and-create-a-new-split-client). 
 The API key is available on your *Organization Settings* page, on the *APIs* tab. Choose the `browser` type. 
 Also update the value of `feature_x` constants with the name of your splits.
 
