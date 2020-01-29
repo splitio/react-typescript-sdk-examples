@@ -1,40 +1,36 @@
 {
-  "name": "react-typescript-sdk-examples",
-  "version": "1.0.0",
-  "description": "Example React application using Typescript to show basic usage of SplitSDK on TS projects",
-  "main": "src/index.tsx",
-  "scripts": {
-    "build": "webpack",
-    "server": "http-server",
-    "start": "npm run build && npm run server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/splitio/react-typescript-sdk-examples.git"
-  },
-  "keywords": [
-    "Typescript",
-    "Split",
-    "SplitSDK"
-  ],
-  "author": "Nico Zelaya",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/splitio/react-typescript-sdk-examples/issues"
-  },
-  "homepage": "https://github.com/splitio/react-typescript-sdk-examples#readme",
+  "name": "react-spa",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@splitsoftware/splitio": "^10.6.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "@splitsoftware/splitio-react": "^1.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0"
   },
-  "devDependencies": {
-    "@types/react": "^15.0.20",
-    "@types/react-dom": "^0.14.23",
-    "awesome-typescript-loader": "^3.1.2",
-    "http-server": "^0.11.1",
-    "source-map-loader": "^0.2.1",
-    "typescript": "^2.2.2",
-    "webpack": "^2.3.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
