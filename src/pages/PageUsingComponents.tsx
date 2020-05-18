@@ -17,17 +17,17 @@ export default function PageUsingComponents() {
   return (
     <main>
       {/* `SplitTreatments` passes down to a child function a `treatments` prop, which contains split evaluations.
-          * It also passes down the SDK status (`isReady`, `isTimedout`, `lastUpdate`) as props, but we are not using
-          * them in this part of the example. This means that for a brief time, the following piece of UI will show up 
-          * the `control` treatment value until the SDK isReady */}
+        * It also passes down the SDK status (`isReady`, `isTimedout`, `lastUpdate`) as props. You can use `isReady`
+        * to conditionally render your component, for example, by showing a Loading label until the SDK is ready.
+        * While the SDK is not ready, treatments values are `control`. */}
       <SplitTreatments names={[feature_1]} >
-        {({ treatments }: ISplitTreatmentsChildProps) => {
-          return (
+        {({ treatments, isReady }: ISplitTreatmentsChildProps) => {
+          return isReady ? (
             <div className="App-section">
               <h4>{`Split: ${feature_1}`}</h4>
               <p>{`Treatment value: ${treatments[feature_1].treatment}`}</p>
             </div>
-          )
+          ) : <Loading />
         }}
       </SplitTreatments>
 
