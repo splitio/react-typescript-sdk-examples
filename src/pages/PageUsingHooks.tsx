@@ -31,8 +31,8 @@ export default function PageUsingHooks() {
   ) : <Loading />;
 
   /* `useClient` returns an SDK client with a given optional user key and traffic type.
-   * If not key is provided, it returns the client at SplitContext.
-   * If we are not using it inside the scope of a `SplitFactory` component, it returns `null`. */
+   * If key is not provided, it returns the client at SplitContext.
+   * If it is not inside the scope of a `SplitFactory` component, it returns `null`. */
   const client: SplitIO.IClient | null = useClient('other_user');
   const treatments: SplitIO.TreatmentsWithConfig = client ? client.getTreatmentsWithConfig([feature_2, feature_3]) : {};
   const OtherFeatures = (
