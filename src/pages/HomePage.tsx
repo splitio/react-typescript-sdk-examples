@@ -7,10 +7,10 @@ export default function HomePage() {
         This example showcases Splitio-React SDK functions with TypeScript.
       </div>
       <div className="App-intro">
-        All pages render the same HTML output, but using different approaches for accessing features (i.e. splits) and flags (i.e. treatments).
+      All pages render the same HTML output, but using different approaches for accessing features flags and treatments.
       </div>
       <div className="App-intro">
-        Take a look at the source code for more guidance. Change the SDK config at <i>sdkConfig.ts</i> and watch the list of splits updated when navigating between pages.
+        Take a look at the source code for more guidance. Change the SDK config at <i>sdkConfig.js</i> and watch the list of feature flags updated when navigating between pages.
       </div>
     </main>
   )
