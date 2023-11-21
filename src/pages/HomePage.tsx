@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main>
       <div className="App-intro">
-        This example showcases Splitio-React SDK functions with TypeScript.
+        This example showcases Split React SDK functions with TypeScript.
       </div>
       <div className="App-intro">
       All pages render the same HTML output, but using different approaches for accessing features flags and treatments.

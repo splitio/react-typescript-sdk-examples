@@ -1,6 +1,6 @@
-# Splitio-React SDK: Single-Page App Example with TypeScript
+# Split React SDK: Single-Page App Example with TypeScript
 
-This is a basic SPA example that demonstrate the use of `Splitio-React SDK`.
+This is a basic SPA example that demonstrate the use of `Split React SDK`.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [TypeScript](https://www.typescriptlang.org/).
 
