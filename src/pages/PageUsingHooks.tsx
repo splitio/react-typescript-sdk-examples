@@ -4,35 +4,36 @@ import { feature_flag_1, feature_flag_2, feature_flag_3 } from '../sdkConfig';
 
 /* This example shows useSplitClient and useSplitTreatments hooks */
 
-function Loading() {
-  return <div>Loading SDK...</div>
+function Loading({ splitKey }: { splitKey?: string }) {
+  return <div>Loading SDK {splitKey ? `for split key "${splitKey}"` : ''}</div>
 };
 
-function Timedout() {
-  return <div>SDK timed out (check your SDK key)</div>
+function Timedout({ splitKey }: { splitKey?: string }) {
+  return <div>SDK timed out {splitKey ? `for split key "${splitKey}"` : ''} (check your SDK key)</div>
 };
 
 export default function PageUsingHooks() {
 
   /* `useSplitTreatments` returns the evaluated treatments of the given list of feature flag names along with the SDK status (`isReady`, `isReadyFromCache`, `isTimedout`, `lastUpdate`, etc).
    * While the SDK is not ready or ready from cache, treatments values are `control`. */
-  const { treatments, isReady, isTimedout } = useSplitTreatments({ names: [feature_flag_1] });
+  const { treatments, isReady, isTimedout } = useSplitTreatments({ names: [feature_flag_1], updateOnSdkTimedout: true });
 
   const FeatureOne = isReady ? (
-    <div className="App-section">
+    <div className='App-section'>
       <h4>{`Feature flag: ${feature_flag_1}`}</h4>
       <p>{`Treatment value: ${treatments[feature_flag_1].treatment}`}</p>
     </div>
-  ) : <Loading />;
+  ) :
+    isTimedout ? <Timedout /> : <Loading />
 
   /* `useSplitClient` returns an SDK client with a given optional split key (e.g., user id) and traffic type.
    * If `splitKey` is not provided, it returns the client at SplitContext.
    * If it is not inside the scope of a `SplitFactory` component, it returns `null`. */
-  const { client } = useSplitClient({ splitKey: 'other_user' });
+  const { client, isReady: isReadyForOtherUser, isTimedout: isTimeoutForOtherUser } = useSplitClient({ splitKey: 'other_user', updateOnSdkTimedout: true });
   const otherTreatments = client ? client.getTreatmentsWithConfig([feature_flag_2, feature_flag_3]) : {};
   const OtherFeatures = (
-    isReady ? (
-      <div className="App-section">{
+    isReadyForOtherUser ? (
+      <div className='App-section'>{
         Object.entries(otherTreatments).map(([featureFlagName, treatment]) =>
           <div key={featureFlagName} >
             <h4>{`Feature flag: ${featureFlagName}`}</h4>
@@ -41,7 +42,7 @@ export default function PageUsingHooks() {
         )
       }</div>
     ) :
-      isTimedout ? <Timedout /> : <Loading />
+      isTimeoutForOtherUser ? <Timedout splitKey='other_user' /> : <Loading splitKey='other_user' />
   );
 
   return (

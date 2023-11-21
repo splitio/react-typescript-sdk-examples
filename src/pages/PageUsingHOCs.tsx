@@ -4,12 +4,12 @@ import { feature_flag_1, feature_flag_2, feature_flag_3 } from '../sdkConfig';
 
 /* This example shows withSplitClient and withSplitTreatments HOCs */
 
-function Loading() {
-  return <div>Loading SDK...</div>
-}
+function Loading({ splitKey }: { splitKey?: string }) {
+  return <div>Loading SDK {splitKey ? `for split key "${splitKey}"` : ''}</div>
+};
 
-function Timedout() {
-  return <div>SDK timed out (check your SDK key)</div>
+function Timedout({ splitKey }: { splitKey?: string }) {
+  return <div>SDK timed out {splitKey ? `for split key "${splitKey}"` : ''} (check your SDK key)</div>
 };
 
 /* `withSplitTreatments` is a HOC for wrapping render functions inside an SplitTreatments.
@@ -20,7 +20,7 @@ function Timedout() {
 const FeatureOne = withSplitTreatments([feature_flag_1])(
   ({ treatments, isReady }: ISplitTreatmentsChildProps) => {
     return isReady ? (
-      <div className="App-section">
+      <div className='App-section'>
         <h4>{`Feature flag: ${feature_flag_1}`}</h4>
         <p>{`Treatment value: ${treatments[feature_flag_1].treatment}`}</p>
       </div>
@@ -36,7 +36,7 @@ const OtherFeatures: React.ComponentType = withSplitClient('other_user')(
   withSplitTreatments([feature_flag_2, feature_flag_3])(
     ({ treatments, isReady, isTimedout }: ISplitTreatmentsChildProps) => {
       return isReady ? (
-        <div className="App-section">{
+        <div className='App-section'>{
           Object.entries(treatments).map(([featureFlagName, treatment]) =>
             <div key={featureFlagName} >
               <h4>{`Feature flag: ${featureFlagName}`}</h4>
@@ -45,7 +45,7 @@ const OtherFeatures: React.ComponentType = withSplitClient('other_user')(
           )
         }</div>
       ) :
-        isTimedout ? <Timedout /> : <Loading />
+        isTimedout ? <Timedout splitKey='other_user' /> : <Loading splitKey='other_user' />
     }
   ), false, true // updateOnSdkUpdate: false, updateOnSdkTimedout: true, updateOnSdkReady: true (default)
 );
