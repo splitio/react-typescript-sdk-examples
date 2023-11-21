@@ -1,7 +1,6 @@
 import React from 'react';
-import { SplitClient, SplitTreatments } from '@splitsoftware/splitio-react';
+import { SplitClient, SplitTreatments, ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react';
 import { feature_flag_1, feature_flag_2, feature_flag_3 } from '../sdkConfig';
-import { ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react/types/types';
 
 /* This example shows SplitClient and SplitTreatments components */
 

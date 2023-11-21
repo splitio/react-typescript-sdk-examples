@@ -1,7 +1,6 @@
 import React from 'react';
-import { withSplitClient, withSplitTreatments } from '@splitsoftware/splitio-react';
+import { withSplitClient, withSplitTreatments, ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react';
 import { feature_flag_1, feature_flag_2, feature_flag_3 } from '../sdkConfig';
-import { ISplitTreatmentsChildProps } from '@splitsoftware/splitio-react/types/types';
 
 /* This example shows withSplitClient and withSplitTreatments HOCs */
 
