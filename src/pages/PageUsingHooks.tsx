@@ -28,7 +28,7 @@ export default function PageUsingHooks() {
 
   /* `useSplitClient` returns an SDK client with a given optional split key (e.g., user id) and traffic type.
    * If `splitKey` is not provided, it returns the client at SplitContext.
-   * If it is not inside the scope of a `SplitFactory` component, it returns `null`. */
+   * If it is not inside the scope of a `SplitFactoryProvider` component, it returns `null`. */
   const { client, isReady: isReadyForOtherUser, isTimedout: isTimeoutForOtherUser } = useSplitClient({ splitKey: 'other_user', updateOnSdkTimedout: true });
   const otherTreatments = client ? client.getTreatmentsWithConfig([feature_flag_2, feature_flag_3]) : {};
   const OtherFeatures = (
