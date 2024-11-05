@@ -47,7 +47,7 @@ const OtherFeatures: React.ComponentType = withSplitClient('other_user')(
       ) :
         isTimedout ? <Timedout splitKey='other_user' /> : <Loading splitKey='other_user' />
     }
-  ), false, true // updateOnSdkUpdate: false, updateOnSdkTimedout: true, updateOnSdkReady: true (default)
+  )
 );
 
 export default function PageUsingHOCs() {

@@ -32,7 +32,7 @@ export default function PageUsingComponents() {
 
       {/* `SplitClient` changes the SDK client at the context, given a key and a optional traffic type.
         *  Thus, the inner `SplitTreatments` components will evaluate feature flags for a different key */}
-      <SplitClient splitKey='other_user' updateOnSdkTimedout={true} >
+      <SplitClient splitKey='other_user' >
         <SplitTreatments names={[feature_flag_2, feature_flag_3]} >
           {({ treatments, isReady, isTimedout }: ISplitTreatmentsChildProps) => {
             /* In the following piece of UI, we use the `isReady` prop as condition for

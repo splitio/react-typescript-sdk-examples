@@ -16,7 +16,7 @@ export default function PageUsingHooks() {
 
   /* `useSplitTreatments` returns the evaluated treatments of the given list of feature flag names along with the SDK status (`isReady`, `isReadyFromCache`, `isTimedout`, `lastUpdate`, etc).
    * While the SDK is not ready or ready from cache, treatments values are `control`. */
-  const { treatments, isReady, isTimedout } = useSplitTreatments({ names: [feature_flag_1], updateOnSdkTimedout: true });
+  const { treatments, isReady, isTimedout } = useSplitTreatments({ names: [feature_flag_1] });
 
   const FeatureOne = isReady ? (
     <div className='App-section'>
@@ -29,7 +29,7 @@ export default function PageUsingHooks() {
   /* `useSplitClient` returns an SDK client with a given optional split key (e.g., user id) and traffic type.
    * If `splitKey` is not provided, it returns the client at SplitContext.
    * If it is not inside the scope of a `SplitFactoryProvider` component, it returns `null`. */
-  const { client, isReady: isReadyForOtherUser, isTimedout: isTimeoutForOtherUser } = useSplitClient({ splitKey: 'other_user', updateOnSdkTimedout: true });
+  const { client, isReady: isReadyForOtherUser, isTimedout: isTimeoutForOtherUser } = useSplitClient({ splitKey: 'other_user' });
   const otherTreatments = client ? client.getTreatmentsWithConfig([feature_flag_2, feature_flag_3]) : {};
   const OtherFeatures = (
     isReadyForOtherUser ? (

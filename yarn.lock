@@ -1179,37 +1179,36 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@splitsoftware/splitio-commons@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-1.13.1.tgz#bcd476dde275234a04e845b9463b03932110189a"
-  integrity sha512-xGu94sLx+tJb6PeM26vH8/LEElsaVbh2BjoLvL5twR4gKsVezie5ZtHhejWT1+iCVCtJuhjZxKwOm4HGYoVIHQ==
+"@splitsoftware/splitio-commons@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-2.0.0.tgz#a50e37f0e8788676be47203dd4335482c13a1e4e"
+  integrity sha512-Sz4+vFacl29xw3451z9IUgB4zBFKUWZdCnmOB0DDXA803YKPqjXphdAwN6nV+1vsX9pXV/OS6UaNC4oUICa6PA==
   dependencies:
+    "@types/ioredis" "^4.28.0"
     tslib "^2.3.1"
 
-"@splitsoftware/splitio-react@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-1.11.0.tgz#3ad1cb1c0e08aff84b4cd381c3368826b9df7a9f"
-  integrity sha512-z7+xh9m8M0x6vOWWNMNelG20JptGMbcY6kSh32pC2WZt2Vfr7PzJqI3g0mx+0ZCDXPaODR0O3OKdp16jp7aA4Q==
+"@splitsoftware/splitio-react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-2.0.0.tgz#552db6d98edd6fec7f210e3c1e7b665e88c403a4"
+  integrity sha512-aXKO0AMqcAMjkDiQBELqHp4JZfmdV+yRGLFlzuqeygCo5+DPWoNNRS3O6Y/NYqNqBzRoVv0f1NqSTWWfU4K8/Q==
   dependencies:
-    "@splitsoftware/splitio" "10.25.1"
+    "@splitsoftware/splitio" "11.0.0"
     memoize-one "^5.1.1"
     shallowequal "^1.1.0"
+    tslib "^2.3.1"
 
-"@splitsoftware/splitio@10.25.1":
-  version "10.25.1"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-10.25.1.tgz#007f00c8bc4cbfd7b9bf890e7cfd73a8e7dd0ee5"
-  integrity sha512-QmCOI2VNhjIMieibtMcc595oyQB5sgrYKSqw7wxKtwMX0VtuPbZ3Lw8fwd0nH2WSKq3Pcjyu3nVSYQRp1bGEvA==
+"@splitsoftware/splitio@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-11.0.0.tgz#22f88da6e34b34f3f8ae0b4bb59c9eb17a8fed21"
+  integrity sha512-9ZEhbpsgjvg41FQaahaG+JouzTQ91mX3xgzSClPMPL55kryjXAnQk9jawapnlkI1cKqE4VDvrznkmfr2/4qHRA==
   dependencies:
-    "@splitsoftware/splitio-commons" "1.13.1"
-    "@types/google.analytics" "0.0.40"
-    "@types/ioredis" "^4.28.0"
+    "@splitsoftware/splitio-commons" "2.0.0"
     bloom-filters "^3.0.0"
     ioredis "^4.28.0"
     js-yaml "^3.13.1"
     node-fetch "^2.7.0"
+    tslib "^2.3.1"
     unfetch "^4.2.0"
-  optionalDependencies:
-    eventsource "^1.1.2"
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
@@ -1411,11 +1410,6 @@
     "@types/events" "*"
     "@types/minimatch" "*"
     "@types/node" "*"
-
-"@types/google.analytics@0.0.40":
-  version "0.0.40"
-  resolved "https://registry.yarnpkg.com/@types/google.analytics/-/google.analytics-0.0.40.tgz#35526e9d78333423c430ade1c821ce54d0f0f850"
-  integrity sha512-R3HpnLkqmKxhUAf8kIVvDVGJqPtaaZlW4yowNwjOZUTmYUQEgHh8Nh5wkSXKMroNAuQM8gbXJHmNbbgA8tdb7Q==
 
 "@types/history@*":
   version "4.7.4"
@@ -4185,7 +4179,7 @@ events@^3.0.0:
   resolved "https://registry.yarnpkg.com/events/-/events-3.0.0.tgz#9a0a0dfaf62893d92b875b8f2698ca4114973e88"
   integrity sha512-Dc381HFWJzEOhQ+d8pkNon++bk9h6cdAoAj4iE6Q4y6xgTzySWXlKn05/TVNpjnfRqi/X0EpJEJohPjNI3zpVA==
 
-eventsource@^1.0.7, eventsource@^1.1.2:
+eventsource@^1.0.7:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.2.tgz#bc75ae1c60209e7cb1541231980460343eaea7c2"
   integrity sha512-xAH3zWhgO2/3KIniEKYPr8plNSzlGINOUqYj0m0u7AB81iRw8b/3E73W6AuU+6klLbaSFmZnaETQ2lXPfAydrA==
