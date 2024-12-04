@@ -1179,31 +1179,31 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@splitsoftware/splitio-commons@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-2.0.0.tgz#a50e37f0e8788676be47203dd4335482c13a1e4e"
-  integrity sha512-Sz4+vFacl29xw3451z9IUgB4zBFKUWZdCnmOB0DDXA803YKPqjXphdAwN6nV+1vsX9pXV/OS6UaNC4oUICa6PA==
+"@splitsoftware/splitio-commons@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-2.0.2.tgz#0b36f377f94442321c59b60dbc271ca9a76e8929"
+  integrity sha512-r2m3kwWnSuROT+7zTzhWBrM0DMRBGJNQcTyvXw8zLPPmBs/PnmAnxCy7uRpfMHOGbP9Q3Iju0bU/H5dG8svyiw==
   dependencies:
     "@types/ioredis" "^4.28.0"
     tslib "^2.3.1"
 
-"@splitsoftware/splitio-react@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-2.0.0.tgz#552db6d98edd6fec7f210e3c1e7b665e88c403a4"
-  integrity sha512-aXKO0AMqcAMjkDiQBELqHp4JZfmdV+yRGLFlzuqeygCo5+DPWoNNRS3O6Y/NYqNqBzRoVv0f1NqSTWWfU4K8/Q==
+"@splitsoftware/splitio-react@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-2.0.1.tgz#3c9d73599c4e7afb5be3c1a55bdfbf09a10be1d7"
+  integrity sha512-Jky3o46w+CO2+x6TN3kzQ4CoASKX4PqtDqSTHY6n5JXBC2CqhlXuvODoMYXKzolOsndku+aL7+Mlavbn7b+2lw==
   dependencies:
-    "@splitsoftware/splitio" "11.0.0"
+    "@splitsoftware/splitio" "11.0.3"
     memoize-one "^5.1.1"
     shallowequal "^1.1.0"
     tslib "^2.3.1"
 
-"@splitsoftware/splitio@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-11.0.0.tgz#22f88da6e34b34f3f8ae0b4bb59c9eb17a8fed21"
-  integrity sha512-9ZEhbpsgjvg41FQaahaG+JouzTQ91mX3xgzSClPMPL55kryjXAnQk9jawapnlkI1cKqE4VDvrznkmfr2/4qHRA==
+"@splitsoftware/splitio@11.0.3":
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-11.0.3.tgz#5caf24c87194f0d0154e37b7dff94a2f32d87041"
+  integrity sha512-UtoixGfICCj52FfaVdI186Czw0qCvvEyCw/OtJVTsgM4Zq0k2mY8yKzQ7tSB/HJtzbUVnuPoxkwEcj0479stmg==
   dependencies:
-    "@splitsoftware/splitio-commons" "2.0.0"
-    bloom-filters "^3.0.0"
+    "@splitsoftware/splitio-commons" "2.0.2"
+    bloom-filters "^3.0.4"
     ioredis "^4.28.0"
     js-yaml "^3.13.1"
     node-fetch "^2.7.0"
@@ -1531,6 +1531,11 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/seedrandom@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-3.0.8.tgz#61cc8ed88f93a3c31289c295e6df8ca40be42bdf"
+  integrity sha512-TY1eezMU2zH2ozQoAFAQFOPpvP15g+ZgSfTZt31AUUH/Rxtnz3H+A/Sv1Snw2/amp//omibc+AEkTaA8KUeOLQ==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
@@ -2345,16 +2350,15 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-bloom-filters@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/bloom-filters/-/bloom-filters-3.0.0.tgz#d076e014db825f3e4194b2edd98c4717bd09ad90"
-  integrity sha512-DBDgLkYokKS5NA5y8P9fuTavKQCkleAP39yqpW/5Nab/vwzHv+wOPRM/yDAStghARDleyRI4orW91uuxj48LKQ==
+bloom-filters@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/bloom-filters/-/bloom-filters-3.0.4.tgz#2712bd8f8092fd0a081fe52a17c63be79dbbfc1e"
+  integrity sha512-BdnPWo2OpYhlvuP2fRzJBdioMCkm7Zp0HCf8NJgF5Mbyqy7VQ/CnTiVWMMyq4EZCBHwj0Kq6098gW2/3RsZsrA==
   dependencies:
+    "@types/seedrandom" "^3.0.8"
     base64-arraybuffer "^1.0.2"
     is-buffer "^2.0.5"
-    lodash "^4.17.15"
-    lodash.eq "^4.0.0"
-    lodash.indexof "^4.0.5"
+    lodash "^4.17.21"
     long "^5.2.0"
     reflect-metadata "^0.1.13"
     seedrandom "^3.0.5"
@@ -6464,20 +6468,10 @@ lodash.defaults@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
   integrity sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
 
-lodash.eq@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.eq/-/lodash.eq-4.0.0.tgz#a39f06779e72f9c0d1f310c90cd292c1661d5035"
-  integrity sha512-vbrJpXL6kQNG6TkInxX12DZRfuYVllSxhwYqjYB78g2zF3UI15nFO/0AgmZnZRnaQ38sZtjCiVjGr2rnKt4v0g==
-
 lodash.flatten@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
   integrity sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
-
-lodash.indexof@^4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/lodash.indexof/-/lodash.indexof-4.0.5.tgz#53714adc2cddd6ed87638f893aa9b6c24e31ef3c"
-  integrity sha512-t9wLWMQsawdVmf6/IcAgVGqAJkNzYVcn4BHYZKTPW//l7N5Oq7Bq138BaVk19agcsPZePcidSgTTw4NqS1nUAw==
 
 lodash.isarguments@^3.1.0:
   version "3.1.0"
@@ -6519,7 +6513,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5:
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.5:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
