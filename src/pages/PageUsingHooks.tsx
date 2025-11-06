@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSplitClient, useSplitTreatments } from '@splitsoftware/splitio-react';
+import { useSplitClient, useTreatment } from '@splitsoftware/splitio-react';
 import { feature_flag_1, feature_flag_2, feature_flag_3 } from '../sdkConfig';
 
-/* This example shows useSplitClient and useSplitTreatments hooks */
+/* This example shows useSplitClient and useTreatment hooks */
 
 function Loading({ splitKey }: { splitKey?: string }) {
   return <div>Loading SDK {splitKey ? `for split key "${splitKey}"` : ''}</div>
@@ -14,14 +14,14 @@ function Timedout({ splitKey }: { splitKey?: string }) {
 
 export default function PageUsingHooks() {
 
-  /* `useSplitTreatments` returns the evaluated treatments of the given list of feature flag names along with the SDK status (`isReady`, `isReadyFromCache`, `isTimedout`, `lastUpdate`, etc).
+  /* `useTreatment` returns the evaluated treatments of the given list of feature flag names along with the SDK status (`isReady`, `isReadyFromCache`, `isTimedout`, `lastUpdate`, etc).
    * While the SDK is not ready or ready from cache, treatments values are `control`. */
-  const { treatments, isReady, isTimedout } = useSplitTreatments({ names: [feature_flag_1] });
+  const { treatment, isReady, isTimedout } = useTreatment({ name: feature_flag_1 });
 
   const FeatureOne = isReady ? (
     <div className='App-section'>
       <h4>{`Feature flag: ${feature_flag_1}`}</h4>
-      <p>{`Treatment value: ${treatments[feature_flag_1].treatment}`}</p>
+      <p>{`Treatment value: ${treatment}`}</p>
     </div>
   ) :
     isTimedout ? <Timedout /> : <Loading />

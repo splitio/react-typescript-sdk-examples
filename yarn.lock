@@ -1179,30 +1179,30 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@splitsoftware/splitio-commons@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-2.0.2.tgz#0b36f377f94442321c59b60dbc271ca9a76e8929"
-  integrity sha512-r2m3kwWnSuROT+7zTzhWBrM0DMRBGJNQcTyvXw8zLPPmBs/PnmAnxCy7uRpfMHOGbP9Q3Iju0bU/H5dG8svyiw==
+"@splitsoftware/splitio-commons@2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-commons/-/splitio-commons-2.8.0.tgz#60fcd5248b091f11398a051b3e5b7c3320b6fb0e"
+  integrity sha512-QgHUreMOEDwf4GZzVPu4AzkZJvuaeSoHsiJc4tT3CxSIYl2bKMz1SSDlI1tW/oVbIFeWjkrIp2lCYEyUBgcvyA==
   dependencies:
     "@types/ioredis" "^4.28.0"
     tslib "^2.3.1"
 
-"@splitsoftware/splitio-react@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-2.0.1.tgz#3c9d73599c4e7afb5be3c1a55bdfbf09a10be1d7"
-  integrity sha512-Jky3o46w+CO2+x6TN3kzQ4CoASKX4PqtDqSTHY6n5JXBC2CqhlXuvODoMYXKzolOsndku+aL7+Mlavbn7b+2lw==
+"@splitsoftware/splitio-react@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio-react/-/splitio-react-2.6.0.tgz#04b5fef7183fd3b0467f184e595ce33d8848d925"
+  integrity sha512-nqel+v0d/dSqm5NZsFpU+KF4PxMuGIHFlc32fnKGkw+JTx+PCCnwQRLUQQkW2VM4B6XPaKPAR0IYkqRG2j9Ucw==
   dependencies:
-    "@splitsoftware/splitio" "11.0.3"
+    "@splitsoftware/splitio" "11.8.0"
     memoize-one "^5.1.1"
     shallowequal "^1.1.0"
     tslib "^2.3.1"
 
-"@splitsoftware/splitio@11.0.3":
-  version "11.0.3"
-  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-11.0.3.tgz#5caf24c87194f0d0154e37b7dff94a2f32d87041"
-  integrity sha512-UtoixGfICCj52FfaVdI186Czw0qCvvEyCw/OtJVTsgM4Zq0k2mY8yKzQ7tSB/HJtzbUVnuPoxkwEcj0479stmg==
+"@splitsoftware/splitio@11.8.0":
+  version "11.8.0"
+  resolved "https://registry.yarnpkg.com/@splitsoftware/splitio/-/splitio-11.8.0.tgz#82c6defbd30f66813164cd6df7330236fed87ac8"
+  integrity sha512-M9ENeH+IEmxwELeCdXgnTbLg+ZP3SRUMM6lImSbv7mD32u1v6ihnUhnhsTJzlQWMDC4H94EAW345q1cO7ovlTQ==
   dependencies:
-    "@splitsoftware/splitio-commons" "2.0.2"
+    "@splitsoftware/splitio-commons" "2.8.0"
     bloom-filters "^3.0.4"
     ioredis "^4.28.0"
     js-yaml "^3.13.1"
